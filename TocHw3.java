@@ -1,4 +1,4 @@
-//TocHW3
+//TocHw3.java
 //Name:HowardYu
 
 import org.json.*;
@@ -17,29 +17,9 @@ public class TocHw3 {
 			 System.out.println("Copy JSON file from the URL!");
 			 System.out.println("Please wait...");
 			 
-			 //---
-			 //the following code between (//---) referenced from the website below
-			 //http://robertvmp.pixnet.net/blog/post/26585200-java---%E8%AE%80%E7%B6%B2%E9%A0%81%E7%AF%84%E4%BE%8B-
 			 URL pageUrl = new URL(argv[0]);
-			 /*
-			 BufferedReader buffer_input_string = new BufferedReader(new InputStreamReader(pageUrl.openStream(), "UTF-8"));
-			 BufferedWriter buffer_output_string = new BufferedWriter(new FileWriter("URL.json", false));
-			 String oneLine = null ;
-			 while ((oneLine = buffer_input_string.readLine()) != null) {
-				 	buffer_output_string.write(oneLine);                
-	            }
-			 buffer_output_string.close();
-			 buffer_input_string.close(); 
-			//---
-			 
-			 */
-			 //new version - Read URL directly
-		     BufferedReader in = new BufferedReader(new InputStreamReader(pageUrl.openStream(),"UTF-8"));
+			 BufferedReader in = new BufferedReader(new InputStreamReader(pageUrl.openStream(),"UTF-8"));
 			 JSONArray obj = new JSONArray(new JSONTokener(in));
-			 
-			 
-			 //JSONArray obj = new JSONArray(new JSONTokener(new FileReader(new File("URL.json"))));  
-			
 			 
 			 boolean conti = true ; 
 			 String s_to_compare ;//, s_to_find
@@ -59,10 +39,8 @@ public class TocHw3 {
 					 year_to_compare = ob.getInt("交易年月");
 					 
 					 //compare
-					 //if(s_to_compare.equals(s_to_find))
 					 if(s_to_compare.equals(argv[1]))
 					 {
-						 //if(road_to_compare.indexOf(road_to_find) != -1)
 						 if(road_to_compare.indexOf(argv[2]) != -1)
 						 {
 							 int target_year = year_to_compare-(Integer.valueOf(argv[3])*100);
