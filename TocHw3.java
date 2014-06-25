@@ -14,9 +14,6 @@ public class TocHw3 {
 			 if(argv.length == 4)
 			 {
 			 
-			 System.out.println("Copy JSON file from the URL!");
-			 System.out.println("Please wait...");
-			 
 			 URL pageUrl = new URL(argv[0]);
 			 BufferedReader in = new BufferedReader(new InputStreamReader(pageUrl.openStream(),"UTF-8"));
 			 JSONArray obj = new JSONArray(new JSONTokener(in));
