@@ -69,8 +69,8 @@ public class TocHw3 {
 			 }
 			 else
 			 {
-				System.out.println("No Search Result!");
-				System.out.println("Please check that all you arguments are correct!");
+				System.out.println("No Result!");
+				System.out.println("Please check that all your arguments are correct!");
 			 }
 			 System.out.println("Output:");
 			 System.out.printf("%d \n" , avg_price);
